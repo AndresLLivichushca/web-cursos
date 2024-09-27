@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+</head>
+<body>
+    <!-- Enlace a jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Enlace a Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="scripts.js"></script>
+    <!-- Encabezado -->
+    <header>
+        <h1>Gestión de Cursos</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#agregar-curso">Agregar Curso</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección principal -->
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a la Gestión de Cursos</h2>
+            <p>En esta plataforma, podrás gestionar todos tus cursos de manera sencilla y eficiente.</p>
+            <p>Registra nuevos cursos, consulta la lista de cursos existentes y contacta con nosotros para cualquier consulta.</p>
+            <p>¡Comienza tu viaje de aprendizaje con nosotros!</p>
+            
+
+            <div class="slider-container">
+               
+                <div class="slider">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/449/876/non_2x/mathematics-doodle-hand-drawn-school-set-vector.jpg" alt="Matematicas" class="active">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGEwxC2hYiN2ENIfm9Fi-gG73qybAUfPTXVg&s" alt="Web">
+                    <img src="https://concepto.de/wp-content/uploads/2018/04/base-de-datos-min-e1523470739502.jpg" alt="Base de Datos">
+                    <img src="https://www.areatecnologia.com/informatica/imagenes/so.jpg" alt="Sistemas Operativos">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKmF7yiLYSg4N6R6mk38fGUGd2jZq_XlEyDQ&s" alt="Redes">
+
+
+                </div>
+                
+            </div>
+
+            
+        </section>
+        
+
+        <section id="cursos">
+            <h2>Lista de Cursos</h2>
+            <ul id="lista-cursos">
+                <!-- La lista de cursos se llenará aquí mediante JavaScript -->
+                
+            </ul>
+        </section>
+
+        <!-- Formulario para agregar cursos -->
+        <section id="agregar-curso">
+            <h2>Registrar nuevo curso</h2>
+            <form id="course-form">
+                <label for="course-name">Nombre del curso:</label>
+                <input type="text" id="course-name" required>
+
+                <label for="instructor-name">Nombre del instructor:</label>
+                <input type="text" id="instructor-name" required>
+
+                <label for="start-date">Fecha de inicio:</label>
+                <input type="date" id="start-date" required>
+
+                <label for="duration">Duración (meses):</label>
+                <input type="number" id="duration" min="1" required>
+
+                <label for="description">Descripción:</label>
+                <textarea id="description" required></textarea>
+
+                <button type="submit">Agregar Curso</button>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div id="contact-info">
+                <p><strong>Nombre Completo:</strong> José Andrés LLivichushca Cordova</p>
+                <p><strong>Correo Electrónico:</strong> andresllivichushca@gmail.com</p>
+                <p><strong>Teléfono:</strong> +593 96 058 8610</p>
+                <p><strong>Mensaje:</strong> No dudes en escribirnos.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Pagina Web - José LLivichushca</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

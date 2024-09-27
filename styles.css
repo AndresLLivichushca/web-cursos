@@ -1,0 +1,214 @@
+/* Margen adicional entre el texto y el slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background: #35424a;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #35424a;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+/* Estilos para los enlaces de navegación */
+nav a {
+    color: #eef0f1; /* Color original del enlace */
+    text-decoration: none; /* Quitar subrayado */
+    padding: 10px; /* Espaciado */
+    transition: all 0.3s ease; /* Suavizar la transición */
+}
+
+/* Efecto de sombreado al pasar el cursor */
+nav a:hover {
+    color: #2a2f35; /* Color al pasar el cursor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombreado */
+    background-color: #f0f0f0; /* Fondo al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+}
+
+
+/* Estilos para la sección de inicio */
+#inicio {
+    background: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar el texto */
+}
+
+#inicio h2 {
+    color: #35424a;
+}
+
+#inicio p {
+    color: #666666;
+    margin: 10px 0;
+}
+
+#inicio button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#inicio button:hover {
+    background: #2a2f35;
+}
+
+button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2a2f35;
+}
+
+.course-details {
+    display: none; /* Ocultar detalles por defecto */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para la sección de agregar curso */
+#agregar-curso {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agregar-curso h2 {
+    color: #35424a;
+}
+
+#agregar-curso form {
+    display: flex;
+    flex-direction: column;
+}
+
+#agregar-curso label {
+    margin-bottom: 5px;
+}
+
+#agregar-curso input,
+#agregar-curso textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#agregar-curso button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#agregar-curso button:hover {
+    background: #2a2f35;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+    color: #35424a;
+}
+
+#contact-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
+#contact-info p strong {
+    color: #35424a;
+    font-weight: bold;
+}
