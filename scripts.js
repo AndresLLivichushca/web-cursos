@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('.slider').slick({
         dots: true, // Muestra puntos de navegación
         infinite: true, // Habilita el ciclo infinito
@@ -8,13 +8,10 @@ $(document).ready(function(){
     });
 });
 
-
 // Mostrar la sección de inicio por defecto al cargar la página
 window.onload = () => {
     mostrarSeccion('inicio');
 };
-
-
 
 // Añadir eventos a los enlaces de navegación
 document.querySelectorAll('nav a').forEach(link => {
@@ -24,9 +21,6 @@ document.querySelectorAll('nav a').forEach(link => {
         mostrarSeccion(seccionId); // Mostrar la sección correspondiente
     });
 });
-
-
-
 
 // Función para mostrar solo la sección correspondiente
 function mostrarSeccion(seccionId) {
@@ -52,9 +46,16 @@ function mostrarDetalles(index) {
 function agregarCurso(event) {
     event.preventDefault();
 
-    // Capturar los valores del formulario
+    // Validar los campos de nombre para que no acepten números
     const nombreCurso = document.getElementById('course-name').value;
     const nombreInstructor = document.getElementById('instructor-name').value;
+
+    if (/\d/.test(nombreCurso) || /\d/.test(nombreInstructor)) {
+        alert('El nombre del curso y el nombre del instructor no pueden contener números.');
+        return;
+    }
+
+    // Capturar los demás valores del formulario
     const fechaInicio = document.getElementById('start-date').value;
     const duracion = document.getElementById('duration').value;
     const descripcion = document.getElementById('description').value;
@@ -94,7 +95,8 @@ function mostrarListaCursos() {
             <p>Fecha de inicio: ${curso.fechaInicio}</p>
             <p>Duración: ${curso.duracion} meses</p>
             <button onclick="mostrarDetalles(${index})">Ver más detalles</button>
-            <div class="course-details">
+            <button onclick="eliminarCurso(${index})">Eliminar curso</button>
+            <div class="course-details" style="display:none;">
                 <p>Descripción: ${curso.descripcion}</p>
             </div>
         `;
@@ -102,10 +104,14 @@ function mostrarListaCursos() {
     });
 }
 
+// Función para eliminar un curso individualmente
+function eliminarCurso(index) {
+    let cursos = JSON.parse(localStorage.getItem('cursos')) || [];
+    cursos.splice(index, 1); // Elimina el curso en la posición dada
+    localStorage.setItem('cursos', JSON.stringify(cursos)); // Actualiza localStorage
+    mostrarListaCursos(); // Actualiza la lista de cursos
+}
+
 // Inicializar la lista de cursos al cargar la página
 document.addEventListener('DOMContentLoaded', mostrarListaCursos);
 document.getElementById('course-form').addEventListener('submit', agregarCurso);
-
-
-
-
